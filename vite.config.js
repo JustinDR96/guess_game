@@ -18,6 +18,8 @@ export default defineConfig({
       targets: [{ src: "assets", dest: "dist" }],
       hook: "writeBundle",
     }),
-    json(), // Ajoutez le plugin rollup-plugin-json ici
+    json({
+      path: "assets/gameIndex.json",
+    }),
   ],
 });
