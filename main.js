@@ -69,11 +69,28 @@ function pixelateImage(image, canvas, pixelSize) {
     }
   }
 }
+const usedIndices = [];
 
 function getRandomIndex(data) {
   if (Array.isArray(data) && data.length > 0) {
-    // Générez un nombre aléatoire entre 0 (inclus) et la longueur du tableau (exclus)
-    return Math.floor(Math.random() * data.length);
+    // Filtrez les indices qui ne sont pas dans usedIndices
+    const availableIndices = data
+      .map((_, index) => index)
+      .filter((index) => !usedIndices.includes(index));
+
+    // Si tous les indices ont été utilisés, réinitialisez usedIndices
+    if (availableIndices.length === 0) {
+      usedIndices.length = 0;
+    }
+
+    // Générez un nombre aléatoire basé sur les indices disponibles
+    const randomIndex =
+      availableIndices[Math.floor(Math.random() * availableIndices.length)];
+
+    // Ajoutez le nouvel index à usedIndices
+    usedIndices.push(randomIndex);
+
+    return randomIndex;
   } else {
     console.error("Le tableau de données est vide ou n'est pas un tableau.");
     return null;
