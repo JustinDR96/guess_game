@@ -102,7 +102,7 @@ function loadRandomImage() {
 }
 
 // Exemple d'utilisation
-fetch("gameIndex.json")
+fetch("./gameIndex.json")
   .then((response) => response.json())
   .then((jsonData) => {
     gameData = jsonData;
