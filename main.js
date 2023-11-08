@@ -1,5 +1,8 @@
 import "./style.scss";
-import gameIndex from "./assets/gameIndex.json"; // Importez le fichier JSON
+import gameIndex from "./assets/gameIndex.json";
+
+// Utilisez gameIndex dans votre code
+console.log(gameIndex);
 
 // Sélectionnez l'image et le canvas
 const image = document.getElementById("image");
