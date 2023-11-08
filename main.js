@@ -16,7 +16,7 @@ const scorePlayer = document.getElementById("score");
 ctx.willReadFrequently = true;
 
 // Largeur et hauteur des pixels
-let pixelSize = 50; // Vous pouvez ajuster cette valeur selon votre préférence
+let pixelSize = 40; // Vous pouvez ajuster cette valeur selon votre préférence
 
 function pixelateImage(image, canvas, pixelSize) {
   // Redimensionnez le canvas pour correspondre aux dimensions de l'image
@@ -88,7 +88,7 @@ function loadRandomImage() {
 
     // Mettez à jour la source de l'image
     image.src = randomImageSrc;
-    pixelSize = 50;
+    pixelSize = 40;
     // Effacez le contenu du canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
