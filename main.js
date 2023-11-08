@@ -1,5 +1,5 @@
 import "./style.scss";
-import gameIndex from "./assets/gameIndex.json";
+import gameIndex from "./gameIndex.json";
 
 // Utilisez gameIndex dans votre code
 console.log(gameIndex);
