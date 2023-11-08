@@ -1,5 +1,5 @@
 import "./style.scss";
-import gameIndex from "./gameIndex.json";
+import gameIndex from "./assets/gameIndex.json";
 
 // Utilisez gameIndex dans votre code
 console.log(gameIndex);
@@ -102,7 +102,7 @@ function loadRandomImage() {
 }
 
 // Exemple d'utilisation
-fetch("./gameIndex.json")
+fetch("./assets/gameIndex.json")
   .then((response) => response.json())
   .then((jsonData) => {
     gameData = jsonData;
