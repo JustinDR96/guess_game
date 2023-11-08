@@ -1,7 +1,5 @@
 import "./style.scss";
-import myData from "./gameIndex.json"; // Importez le fichier JSON
-
-// Utilisez myData dans votre code
+import gameIndex from "./gameIndex.json"; // Importez le fichier JSON
 
 // Sélectionnez l'image et le canvas
 const image = document.getElementById("image");

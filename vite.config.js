@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import copy from "rollup-plugin-copy";
+import json from "@rollup/plugin-json"; // Importez le plugin rollup-plugin-json
 
 export default defineConfig({
   base: "/guess_game/", // Remplacez '/chemin-de-votre-application/' par la base souhaitée
@@ -14,10 +15,9 @@ export default defineConfig({
 
   plugins: [
     copy({
-      targets: [ 
-        { src: "assets", dest: "dist" }, // Copier le répertoire "images" dans "dist/images"
-      ],
+      targets: [{ src: "assets", dest: "dist" }],
       hook: "writeBundle",
     }),
+    json(), // Ajoutez le plugin rollup-plugin-json ici
   ],
 });
