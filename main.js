@@ -6,7 +6,8 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 let currentImageIndex;
 let gameData;
-
+let score = parseInt(localStorage.getItem("score")) || 0;
+const scorePlayer = document.getElementById("score");
 // Définissez l'attribut willReadFrequently sur true
 ctx.willReadFrequently = true;
 
@@ -83,7 +84,7 @@ function loadRandomImage() {
 
     // Mettez à jour la source de l'image
     image.src = randomImageSrc;
-    pixelSize = 40;
+    pixelSize = 50;
     // Effacez le contenu du canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -117,6 +118,18 @@ function checkAnswer() {
   userAnswer.style.border = "";
   if (userAnswer.value.toUpperCase() === correctName) {
     console.log("Réponse correcte !");
+
+    const messageBox = document.getElementById("messageBox");
+    messageBox.style.display = "block";
+    setTimeout(function () {
+      messageBox.style.display = "none"; // Masquez la boîte de dialogu
+      attempts = 0; // Réinitialisez le compteur de tentatives
+      userAnswer.value = "";
+    }, 1000);
+    // Mettez à jour le score en ajoutant la valeur de pixelSize
+    const newScore = score + pixelSize;
+    updateScore(newScore);
+
     // Chargez une nouvelle image
     loadRandomImage();
     attempts = 0; // Réinitialise le compteur de tentatives
@@ -138,6 +151,30 @@ function checkAnswer() {
   }
 }
 
+function updateScore(newScore) {
+  // Mettez à jour le score
+  score = newScore;
+  const scoreElement = document.getElementById("score");
+  scoreElement.innerText = `Score : ${score}`;
+
+  // Sauvegardez le score dans le localStorage
+  localStorage.setItem("score", score);
+}
+// Sélectionnez le bouton de réinitialisation
+const resetButton = document.getElementById("reset-btn");
+
+// Gestionnaire d'événements pour le clic sur le bouton de réinitialisation
+resetButton.addEventListener("click", () => {
+  resetScore();
+});
+
+function resetScore() {
+  // Réinitialisez le score à zéro
+  updateScore(0);
+}
+
 const submitButton = document.getElementById("submit-btn");
 submitButton.addEventListener("click", checkAnswer);
+
 loadRandomImage();
+updateScore(score);

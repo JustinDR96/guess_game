@@ -38,5 +38,41 @@
   {
     "name": "celeste",
     "src": "/assets/celeste.jpg"
+  },
+  {
+    "name": "Red Dead Redemption 2",
+    "src": "/assets/rdr2.jpg"
+  },
+  {
+    "name": "Breath of the Wild",
+    "src": "/assets/zelda.jpg"
+  },
+  {
+    "name": "Fortnite",
+    "src": "/assets/fortnite.jpg"
+  },
+  {
+    "name": "Cyberpunk 2077",
+    "src": "/assets/cyberpunk.jpg"
+  },
+  {
+    "name": "Minecraft",
+    "src": "/assets/minecraft.jpg"
+  },
+  {
+    "name": "Assassin's Creed Valhalla",
+    "src": "/assets/ac.jpg"
+  },
+  {
+    "name": "The Witcher 3",
+    "src": "/assets/thewitcher3.jpg"
+  },
+  {
+    "name": "Overwatch",
+    "src": "/assets/overwatch.jpg"
+  },
+  {
+    "name": "Super Mario Odyssey",
+    "src": "/assets/spmario.jpg"
   }
 ]

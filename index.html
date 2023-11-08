@@ -9,6 +9,8 @@
     <main class="container">
       <div class="content-body">
         <h1>Guess the game !</h1>
+        <span id="score"></span>
+        <div id="messageBox" style="display: none">Good answer!</div>
         <div class="image-box">
           <img id="image" src="/assets/the_finals.jpg" />
           <canvas id="canvas" width="600" height="400"></canvas>
@@ -17,6 +19,7 @@
           <input type="text" placeholder="your answer" id="answer" />
           <button id="submit-btn">Submit</button>
         </div>
+        <button id="reset-btn">Reset the Score</button>
       </div>
     </main>
 
