@@ -1,0 +1,42 @@
+[
+  {
+    "name": "the finals",
+    "src": "/assets/the_finals.jpg"
+  },
+  {
+    "name": "mario kart 8",
+    "src": "/assets/mario_kart_8.jpg"
+  },
+  {
+    "name": "warzone",
+    "src": "/assets/warzone.jpg"
+  },
+  {
+    "name": "final fantasy VII",
+    "src": "/assets/ff7.jpg"
+  },
+  {
+    "name": "project cars 3",
+    "src": "/assets/project_cars_3.jpg"
+  },
+  {
+    "name": "Doom Eternal",
+    "src": "/assets/doom_eternal.jpg"
+  },
+  {
+    "name": "sonic",
+    "src": "/assets/sonic.jpg"
+  },
+  {
+    "name": "battlefield 3",
+    "src": "/assets/bf3.jpg"
+  },
+  {
+    "name": "Fc 24",
+    "src": "/assets/fc24.jpg"
+  },
+  {
+    "name": "celeste",
+    "src": "/assets/celeste.jpg"
+  }
+]
