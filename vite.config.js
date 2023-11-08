@@ -13,7 +13,6 @@ export default defineConfig({
   },
 
   plugins: [
-    // Plugin pour copier les répertoires "audio" et "images" dans le répertoire de sortie
     copy({
       targets: [ 
         { src: "assets", dest: "dist" }, // Copier le répertoire "images" dans "dist/images"
